@@ -43,6 +43,10 @@ class _HomeScreenState extends State<HomeScreen> {
         foregroundColor: Colors.white,
         actions: [
           IconButton(
+            icon: const Icon(Icons.person),
+            onPressed: () => Navigator.pushNamed(context, '/profile'),
+          ),
+          IconButton(
             icon: const Icon(Icons.settings),
             onPressed: _navigateToSettings,
           ),
@@ -139,68 +143,26 @@ class _HomeScreenState extends State<HomeScreen> {
                 style: AppTextStyles.heading3,
               ),
               const SizedBox(height: 16),
-              // Feature cards (placeholder)
+              // Feature cards
               _buildFeatureCard(
                 icon: Icons.store,
                 title: 'My Shops',
                 description: 'Manage your shops',
-                onTap: () {
-                  showDialog(
-                    context: context,
-                    builder: (context) => AlertDialog(
-                      title: const Text('Coming Soon'),
-                      content: const Text('Shop management features are coming soon.'),
-                      actions: [
-                        TextButton(
-                          onPressed: () => Navigator.pop(context),
-                          child: const Text('OK'),
-                        ),
-                      ],
-                    ),
-                  );
-                },
+                onTap: () => Navigator.pushNamed(context, '/shops'),
               ),
               const SizedBox(height: 12),
               _buildFeatureCard(
                 icon: Icons.inventory_2,
                 title: 'Inventory',
                 description: 'Manage inventory and stock',
-                onTap: () {
-                  showDialog(
-                    context: context,
-                    builder: (context) => AlertDialog(
-                      title: const Text('Coming Soon'),
-                      content: const Text('Inventory management features are coming soon.'),
-                      actions: [
-                        TextButton(
-                          onPressed: () => Navigator.pop(context),
-                          child: const Text('OK'),
-                        ),
-                      ],
-                    ),
-                  );
-                },
+                onTap: () => Navigator.pushNamed(context, '/inventory'),
               ),
               const SizedBox(height: 12),
               _buildFeatureCard(
                 icon: Icons.receipt,
                 title: 'Orders',
                 description: 'View and manage orders',
-                onTap: () {
-                  showDialog(
-                    context: context,
-                    builder: (context) => AlertDialog(
-                      title: const Text('Coming Soon'),
-                      content: const Text('Order management features are coming soon.'),
-                      actions: [
-                        TextButton(
-                          onPressed: () => Navigator.pop(context),
-                          child: const Text('OK'),
-                        ),
-                      ],
-                    ),
-                  );
-                },
+                onTap: () => Navigator.pushNamed(context, '/orders'),
               ),
               const SizedBox(height: 48),
               // Logout button
