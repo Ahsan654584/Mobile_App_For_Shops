@@ -7,7 +7,6 @@ import 'providers/auth_provider.dart';
 import 'providers/connectivity_provider.dart';
 import 'services/auth_service.dart';
 import 'services/connectivity_service.dart';
-import 'services/firebase_service.dart';
 import 'services/firestore_service.dart';
 import 'services/sqlite_service.dart';
 import 'services/sync_service.dart';
