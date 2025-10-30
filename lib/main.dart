@@ -5,6 +5,8 @@ import 'config/routes.dart';
 import 'config/app_config.dart';
 import 'providers/auth_provider.dart';
 import 'providers/connectivity_provider.dart';
+import 'providers/data_provider.dart';
+import 'providers/sync_provider.dart';
 import 'services/auth_service.dart';
 import 'services/connectivity_service.dart';
 import 'services/firestore_service.dart';
@@ -16,6 +18,11 @@ import 'views/screens/login_screen.dart';
 import 'views/screens/signup_screen.dart';
 import 'views/screens/home_screen.dart';
 import 'views/screens/settings_screen.dart';
+import 'views/screens/profile_screen.dart';
+import 'views/screens/shops_screen.dart';
+import 'views/screens/inventory_screen.dart';
+import 'views/screens/orders_screen.dart';
+import 'views/screens/shop_detail_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
