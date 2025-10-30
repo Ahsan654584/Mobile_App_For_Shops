@@ -103,6 +103,11 @@ class MyApp extends StatelessWidget {
         Routes.signup: (_) => const SignupScreen(),
         Routes.home: (_) => const HomeScreen(),
         Routes.settings: (_) => const SettingsScreen(),
+        '/profile': (_) => const ProfileScreen(),
+        '/shops': (_) => const ShopsScreen(),
+        '/inventory': (_) => const InventoryScreen(),
+        '/orders': (_) => const OrdersScreen(),
+        '/shop-detail': (_) => const ShopDetailScreen(),
       },
       debugShowCheckedModeBanner: false,
     );
