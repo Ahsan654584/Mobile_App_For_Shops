@@ -28,9 +28,6 @@ void main() async {
   final sqliteService = SQLiteService();
   await sqliteService.initialize();
 
-  final firebaseService = FirebaseService();
-  firebaseService.initialize();
-
   final firestoreService = FirestoreService();
   firestoreService.initialize();
 
