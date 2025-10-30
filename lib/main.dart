@@ -69,6 +69,18 @@ void main() async {
             connectivityService: connectivityService,
           ),
         ),
+        ChangeNotifierProvider(
+          create: (_) => DataProvider(
+            firestoreService: firestoreService,
+            sqliteService: sqliteService,
+          ),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => SyncProvider(
+            syncService: syncService,
+            connectivityService: connectivityService,
+          ),
+        ),
       ],
       child: const MyApp(),
     ),
