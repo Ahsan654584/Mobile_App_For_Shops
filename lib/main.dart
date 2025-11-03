@@ -56,23 +56,30 @@ class ShopManagementApp extends StatelessWidget {
           minTextAdapt: true,
           splitScreenMode: true,
           builder: (context, child) {
-            return MaterialApp.router(
-              title: AppConstants.appName,
-              debugShowCheckedModeBanner: false,
-              theme: theme,
-              darkTheme: darkTheme,
-              localizationsDelegates: const [
-                S.delegate,
-                GlobalMaterialLocalizations.delegate,
-                GlobalWidgetsLocalizations.delegate,
-                GlobalCupertinoLocalizations.delegate,
+            return MultiBlocProvider(
+              providers: [
+                BlocProvider(
+                  create: (context) => di.sl<AuthBloc>(),
+                ),
               ],
-              supportedLocales: const [
-                Locale('en', 'US'), // English
-                Locale('ur', 'PK'), // Urdu
-              ],
-              locale: const Locale('en', 'US'), // Default locale
-              routerConfig: AppRouter.router,
+              child: MaterialApp.router(
+                title: AppConstants.appName,
+                debugShowCheckedModeBanner: false,
+                theme: theme,
+                darkTheme: darkTheme,
+                localizationsDelegates: const [
+                  S.delegate,
+                  GlobalMaterialLocalizations.delegate,
+                  GlobalWidgetsLocalizations.delegate,
+                  GlobalCupertinoLocalizations.delegate,
+                ],
+                supportedLocales: const [
+                  Locale('en', 'US'), // English
+                  Locale('ur', 'PK'), // Urdu
+                ],
+                locale: const Locale('en', 'US'), // Default locale
+                routerConfig: AppRouter.router,
+              ),
             );
           },
         );
