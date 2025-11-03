@@ -11,6 +11,7 @@ import 'core/utils/constants.dart';
 import 'services/injection_container.dart' as di;
 import 'routes/app_router.dart';
 import 'generated/l10n.dart';
+import 'features/auth/presentation/bloc/auth_bloc.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
